@@ -1,0 +1,11 @@
+*
+!.gitignore
+
+!Assignments/
+!Assignments/**
+
+!Lectures/
+!Lectures/**
+
+!Lecture\ */
+!Lecture\ */**
