@@ -11,4 +11,5 @@ add_executable(OPSYS
         "Labs/Lab 2/user_read.c"
         "Lectures/Lecture 2/proc_example.c"
         "Lectures/Lecture 2/proc_user.c"
-        "Lectures/Lecture 3/kmalloc_test.c")
+        "Lectures/Lecture 3/kmalloc_test.c"
+        "Lectures/Lecture 2/helloWorld.c")
