@@ -32,9 +32,12 @@
 #include <string.h>
 
 int your_fcn(void) {
-        char buf[5];
+        char buf[62];
 
-        strcpy(buf, "aaaa");
+        char input[79];
+        memset(input, 'A', 72);
+        memcpy(input + 72, "\x65\x12\x40", 3);
+        strcpy(buf, input);
 
         return 0;
 }
