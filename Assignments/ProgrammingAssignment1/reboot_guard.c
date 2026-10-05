@@ -115,5 +115,5 @@ module_init(reboot_guard_init);
 module_exit(reboot_guard_exit);
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("OPSYS student");
+MODULE_AUTHOR("Kevin Zhu");
 MODULE_DESCRIPTION("Passphrase guard for the reboot system call");
