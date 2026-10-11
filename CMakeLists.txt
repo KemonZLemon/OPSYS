@@ -27,5 +27,6 @@ foreach(CPP_SOURCE IN LISTS CPP_SOURCES)
     file(RELATIVE_PATH CPP_RELATIVE_PATH "${CMAKE_CURRENT_SOURCE_DIR}" "${CPP_SOURCE}")
     string(REPLACE ".cpp" "" CPP_TARGET_SUFFIX "${CPP_RELATIVE_PATH}")
     string(REGEX REPLACE "[^A-Za-z0-9_]" "_" CPP_TARGET_SUFFIX "${CPP_TARGET_SUFFIX}")
-    add_executable("cpp_${CPP_TARGET_SUFFIX}" "${CPP_SOURCE}")
+    add_executable("cpp_${CPP_TARGET_SUFFIX}" "${CPP_SOURCE}"
+            Assignments/ProgrammingAssignment2/test.c)
 endforeach()
