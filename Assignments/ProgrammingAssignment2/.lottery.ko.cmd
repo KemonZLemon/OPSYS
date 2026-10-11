@@ -1,0 +1,1 @@
+savedcmd_lottery.ko := ld -r -m elf_x86_64 -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T /home/kevin/Downloads/linux-7.0/scripts/module.lds -o lottery.ko lottery.o lottery.mod.o .module-common.o
