@@ -3,7 +3,6 @@ savedcmd_lottery.o := gcc -Wp,-MMD,./.lottery.o.d -nostdinc -I/home/kevin/Downlo
 source_lottery.o := lottery.c
 
 deps_lottery.o := \
-    $(wildcard include/config/COMPAT) \
   /home/kevin/Downloads/linux-7.0/include/linux/compiler-version.h \
     $(wildcard include/config/CC_VERSION_TEXT) \
   /home/kevin/Downloads/linux-7.0/include/linux/kconfig.h \
@@ -486,6 +485,7 @@ deps_lottery.o := \
   /home/kevin/Downloads/linux-7.0/include/linux/restart_block.h \
   /home/kevin/Downloads/linux-7.0/arch/x86/include/asm/thread_info.h \
     $(wildcard include/config/X86_FRED) \
+    $(wildcard include/config/COMPAT) \
   /home/kevin/Downloads/linux-7.0/include/asm-generic/thread_info_tif.h \
   /home/kevin/Downloads/linux-7.0/arch/x86/include/asm/smp.h \
     $(wildcard include/config/DEBUG_NMI_SELFTEST) \
@@ -1092,6 +1092,7 @@ deps_lottery.o := \
     $(wildcard include/config/UNWINDER_ORC) \
   /home/kevin/Downloads/linux-7.0/include/asm-generic/module.h \
     $(wildcard include/config/HAVE_MOD_ARCH_SPECIFIC) \
+  /home/kevin/Downloads/linux-7.0/include/generated/uapi/linux/version.h \
   /home/kevin/Downloads/linux-7.0/include/linux/miscdevice.h \
   /home/kevin/Downloads/linux-7.0/include/uapi/linux/major.h \
   /home/kevin/Downloads/linux-7.0/include/linux/device.h \
@@ -1138,21 +1139,10 @@ deps_lottery.o := \
   /home/kevin/Downloads/linux-7.0/include/linux/device/driver.h \
   /home/kevin/Downloads/linux-7.0/arch/x86/include/asm/device.h \
   /home/kevin/Downloads/linux-7.0/include/linux/pm_wakeup.h \
-  /home/kevin/Downloads/linux-7.0/include/linux/cpu.h \
-    $(wildcard include/config/GENERIC_CPU_DEVICES) \
-    $(wildcard include/config/PM_SLEEP_SMP) \
-    $(wildcard include/config/PM_SLEEP_SMP_NONZERO_CPU) \
-    $(wildcard include/config/ARCH_HAS_CPU_FINALIZE_INIT) \
-    $(wildcard include/config/CPU_MITIGATIONS) \
-  /home/kevin/Downloads/linux-7.0/include/linux/node.h \
-    $(wildcard include/config/HMEM_REPORTING) \
-  /home/kevin/Downloads/linux-7.0/include/linux/cpuhotplug.h \
-    $(wildcard include/config/HOTPLUG_CORE_SYNC_DEAD) \
-  /home/kevin/Downloads/linux-7.0/include/linux/cpuhplock.h \
   lottery.h \
 
 lottery.o: $(deps_lottery.o)
 
 $(deps_lottery.o):
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 lottery.o: $(wildcard /home/kevin/Downloads/linux-7.0/tools/objtool/objtool)

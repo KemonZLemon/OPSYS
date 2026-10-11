@@ -1098,5 +1098,5 @@ deps_lottery.mod.o := \
 lottery.mod.o: $(deps_lottery.mod.o)
 
 $(deps_lottery.mod.o):
-
+                                                                                  
 lottery.mod.o: $(wildcard /home/kevin/Downloads/linux-7.0/tools/objtool/objtool)
