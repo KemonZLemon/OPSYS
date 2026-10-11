@@ -16,7 +16,7 @@
 #include <linux/string.h>
 #include <linux/uaccess.h>
 
-#define REBOOT_PASSPHRASE "Passphrase"
+#define REBOOT_PASSPHRASE "Correct Passphrase"
 #define PASSPHRASE_MAX_LEN 128
 
 #if defined(__x86_64__)
