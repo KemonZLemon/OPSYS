@@ -171,5 +171,5 @@ module_init(pagecache_test_init);
 module_exit(pagecache_test_exit);
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("OPSYS assignment");
-MODULE_DESCRIPTION("Compare a read() buffer page with its file page-cache page");
+MODULE_AUTHOR("Kevin Zhu");
+MODULE_DESCRIPTION("Progamming Assignment 3");
